@@ -1,0 +1,163 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GovtPath</title>
+    <!-- font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/css/aboutus.css">
+    <link rel="stylesheet" href="~/css/Stylesheet.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="home">
+        <div class="n-col1">
+                       <img src="~/images/logo.png" alt="logo">
+        </div>
+        <div class="n-col2">
+            <a  asp-action="Index">Home</a>
+            <a asp-action="LatestJob">Latest Job</a>
+            <a asp-action="AdmitCard">Admit Card</a>
+            <a asp-action="Result">Result</a>
+            <a class="active"  asp-action="AboutUs">About Us</a>
+        </div>
+        <div class="n-col3">
+            <div class="input">
+                <input type="text" placeholder="Search Jobs Here...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Navigation  -->
+    <div class="m-header">
+        <nav class="navbar">
+            <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+            <h2>GovtPath</h2>
+            <div class="nav-menu">
+                <button class="nav-close" aria-label="Close menu">&times;</button>
+                <ul class="nav-list">
+                    <li><a asp-action="Index">Home</a></li>
+                    <li><a asp-action="LatestJob">Latest Job</a></li>
+                    <li><a asp-action="AdmitCard">Admit Card</a></li>
+                    <li><a asp-action="Result">Result</a></li>
+                    <li><a asp-action="AboutUs">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <section class="intro">
+            <h2>Welcome to GovtPath!</h2>
+            <p>At GovtPath, we are dedicated to transforming the way you connect with job opportunities. Our mission is simple: to bridge the gap between job seekers and employers, making the hiring process smoother, faster, and more efficient.</p>
+            <img src="https://img.freepik.com/free-photo/rag-doll-lined-up-one-red-through-magnifying-glass_1156-638.jpg?t=st=1726467796~exp=1726471396~hmac=3330ab83ba72d67bd8d2f3fd7c6819cfcdf7e06e79584301bc8c01d0c5e0e4ad&w=740" alt="Welcome to GovtPath">
+        </section>
+
+        <section class="story">
+            <h2>Our Story</h2>
+            <p>Founded in 2024, GovtPath was born from a desire to create a more intuitive and user-friendly job search platform. Frustrated with outdated job boards and complicated application processes, our founders set out to design a platform that puts the user first. We’ve combined cutting-edge technology with a deep understanding of the job market to bring you a service that’s not only innovative but also genuinely helpful.</p>
+            <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-homepage-illustration_23-2149255390.jpg?t=st=1726468104~exp=1726471704~hmac=c2cfa077ae75a6734663bd29e4c23c9e894231b22a209cc19dcd0f70e99d0121&w=740" alt="Our Story">
+        </section>
+
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>We believe that finding the right job should be an exciting journey, not a stressful chore. Our mission is to provide a streamlined, user-centric platform where job seekers can discover new opportunities and employers can find top talent with ease. We’re here to support you every step of the way, from job search to hiring.</p>
+            <img src="https://img.freepik.com/free-vector/recruitment-agency-searching-job-candidates_1262-19874.jpg?t=st=1726467661~exp=1726471261~hmac=99071a7f745e0a676a7d3b023cbecbc9aa7f70179dcb45aa58ad6b5f019d42e2&w=740" alt="Our Mission">
+        </section>
+
+        <section class="team">
+            <h2>Our Team</h2>
+            <p>Our team is a diverse group of professionals with backgrounds in technology, human resources, and career development. Together, we bring a wealth of experience and passion to the table, ensuring that GovtPath meets the needs of both job seekers and employers.</p>
+            <img src="https://img.freepik.com/free-vector/recruitment-agency-applicants-job-interview_1262-18959.jpg?t=st=1726467739~exp=1726471339~hmac=ff12bda8974142f07cf020698e39fb9a73c5852ab5dccb709cdcddd8f141444b&w=740" alt="Our Team">
+            <p class="team-caption">Our dedicated team working hard to make GovtPath the best it can be.</p>
+        </section>
+
+        <section class="offerings">
+            <h2>What We Offer</h2>
+            <ul>
+                <li><strong>Comprehensive Job Listings:</strong> Browse through thousands of job postings across various industries and locations.</li>
+                <!-- <li><strong>Advanced Search Features:</strong> Use our powerful search tools to find jobs that match your skills, experience, and preferences.</li> -->
+                <li><strong>Employer Solutions:</strong> Streamlined recruitment tools to help employers find and attract the best candidates.</li>
+                <li><strong>Career Resources:</strong> Access valuable resources and tips to enhance your job search and career development.</li>
+            </ul>
+            <img src="https://img.freepik.com/free-vector/business-people-working-searching-applicants_1262-19729.jpg?t=st=1726467710~exp=1726471310~hmac=1ea97044c26eb933ac0ff06fce68f24292f7040202875fdb3422ddefed6289bd&w=740" alt="What We Offer">
+        </section>
+
+        <section class="why-choose-us">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>User-Friendly Design:</strong> Our intuitive interface ensures that you can easily navigate through job listings and application processes.</li>
+                <li><strong>Tailored Recommendations:</strong> Get job suggestions that match your profile and career goals.</li>
+                <li><strong>Dedicated Support:</strong> Our customer support team is always here to assist you with any questions or issues.</li>
+            </ul>
+            <img src="https://img.freepik.com/free-vector/teamwork-puzzle-concept-illustration_114360-14645.jpg?t=st=1726467890~exp=1726471490~hmac=c32795ffc9b2243733528166a08f11d4fca5c1a38316d59272869d1575d9998d&w=740" alt="Why Choose Us">
+            <p class="why-choose-us-caption">Our platform in action, helping users find their perfect job.</p>
+        </section>
+
+        <section class="join-us">
+            <h2>Join Us on Our Journey</h2>
+            <p>We’re excited about the future and the role GovtPath will play in it. Whether you’re looking for your dream job or seeking top talent for your company, we’re here to help you succeed. Stay connected with us through our blog, social media, and newsletters to keep up with the latest updates and career tips.</p>
+            <p>Thank you for choosing GovtPath. Together, let’s make job searching and hiring a seamless experience!</p>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or feedback? We’d love to hear from you!</p>
+            <p>Email: <a href="mailto:support@GovtPath.com">support@GovtPath.com</a></p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address:Lucknow, Uttar Pradesh, India</p>
+        </section>
+    </main>
+    <!-- Footer Section  -->
+    <footer>
+        <div class="col1">
+            <h1>GovtPath</h1>
+            <p>Looking for your next career opportunity. Look no further</p>
+            <div class="f-menu">
+                <a asp-action="Index">Home</a>
+                <a asp-action="AboutUs">About Us</a>
+                <a asp-action="LatestJob">Latest Job</a>
+                <a asp-action="Result">Result</a>
+            </div>
+        </div>
+        <div class="col1">
+            <h1>Subscribe To Get Our <br> Newsletter</h1>
+            <p>Looking for your next career opportunity. Look no further</p>
+        </div>
+        <div class="col3">
+            <div class="row1">
+                <input type="email" placeholder="Enter Your Email">
+                <button type="submit">Subscribe</button>
+            </div>
+            <div class="row2">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-threads"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-google-play"></i>
+                <i class="fa-brands fa-app-store-ios"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- Bottom Footer  -->
+    <div class="b-footer">
+        <p>© 2024 GovtPath. All rights reserved. | Designed By <a href="AdminLogin.html" target="_blank">Suresh Kumar</a></p>
+    </div>
+    <!-- JS File  -->
+        <script src="~/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿@model IEnumerable<GJAMS.Models.Result>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS Library CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet">
+    <!-- Stylesheet files  -->
+    <link rel="stylesheet" href="~/css/Stylesheet.css">
+    <title>Results | GovtPath</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav id="home">
+        <div class="n-col1">
+            <img src="~/images/logo.png" alt="">
+        </div>
+        <div class="n-col2">
+            <a asp-action="Index">Home</a>
+            <a asp-action="LatestJob">Latest Job</a>
+            <a  asp-action="AdmitCard">Admit Card</a>
+            <a class="active" asp-action="Result">Result</a>
+            <a asp-action="AboutUs">About Us</a>
+        </div>
+        <div class="n-col3">
+            <div class="input">
+                <input type="text" placeholder="Search Jobs Here...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Navigation  -->
+    <div class="m-header">
+        <nav class="navbar">
+            <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+            <h2>GovtPath</h2>
+            <div class="nav-menu">
+                <button class="nav-close" aria-label="Close menu">&times;</button>
+                <ul class="nav-list">
+                    <li><a asp-action="Index">Home</a></li>
+                    <li><a asp-action="LatestJob">Latest Job</a></li>
+                    <li><a asp-action="AdmitCard">Admit Card</a></li>
+                    <li><a asp-action="Result">Result</a></li>
+                    <li><a asp-action="AboutUs">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Header Section  -->
+    <header>
+        <div class="h-col1">
+            <p class="gtr">Welcome to the Govt Job Advertisement Portal!</p>
+            <h1>Unlock Your Dream <br> Career with <span>GovtPath</span></h1>
+            <p>
+                Looking for a new Govt job can be both exciting and daunting. Navigating the the job market involves
+                exploring various avenues, including online job boards.
+            </p>
+        </div>
+        <div class="h-col2"></div>
+    </header>
+    <!-- Result Section  -->
+    <div class="result" id="result" data-aos="fade-up" data-aos-duration="500">
+        <h1>Results</h1>
+        <div class="card-wrp" data-aos="fade-up" data-aos-duration="500">
+         @foreach (var data in Model)
+            {
+                   <a asp-action="ResultDetail" asp-route-id="@data.id">
+                <div class="crd1">
+                    <div class="col1">@data.name_of_post</div>
+                    <div class="col2">
+                        <p><i class="fa-regular fa-clock"></i> @data.post_date</p>
+                        <p><i class="fa-solid fa-circle-user"></i> @data.total_post Posts</p>
+                    </div>
+                </div>
+            </a>
+                }
+        </div>
+    </div>
+    <!-- Footer Section  -->
+    <footer>
+        <div class="col1">
+            <h1>GovtPath</h1>
+            <p>Looking for your next career opportunity. Look no further</p>
+            <div class="f-menu">
+                <a asp-action="Index">Home</a>
+                <a asp-action="AboutUs">About Us</a>
+                <a asp-action="LatestJob">Latest Job</a>
+                <a asp-action="Result">Result</a>
+            </div>
+        </div>
+        <div class="col1">
+            <h1>Subscribe To Get Our <br> Newsletter</h1>
+            <p>Looking for your next career opportunity. Look no further</p>
+        </div>
+        <div class="col3">
+            <div class="row1">
+                <input type="email" placeholder="Enter Your Email">
+                <button type="submit">Subscribe</button>
+            </div>
+            <div class="row2">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-threads"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-google-play"></i>
+                <i class="fa-brands fa-app-store-ios"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- Bottom Footer  -->
+    <div class="b-footer">
+        <p>© 2024 GovtPath. All rights reserved. | Designed By Suresh Kumar</p>
+    </div>
+    <!-- JS File  -->
+        <script src="~/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

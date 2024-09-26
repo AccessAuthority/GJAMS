@@ -1,0 +1,228 @@
+﻿@model GJAMS.Models.Result
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://f  onts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet">
+    <!-- Stylesheet files  -->
+    <link rel="stylesheet" href="~/css/Stylesheet.css">
+    <link rel="stylesheet" href="~/css/jobdetails.css">
+    <title>ResultDetails | GovtPath</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav id="home">
+        <div class="n-col1">
+            <img src="~/images/logo.png" alt="">
+        </div>
+        <div class="n-col2">
+            <a asp-action="Index">Home</a>
+            <a asp-action="LatestJob">Latest Job</a>
+            <a asp-action="AdmitCard">Admit Card</a>
+            <a asp-action="Result">Result</a>
+            <a asp-action="AboutUs">About Us</a>
+        </div>
+        <div class="n-col3">
+            <div class="input">
+                <input type="text" placeholder="Search Jobs Here...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Navigation  -->
+    <div class="m-header">
+        <nav class="navbar">
+            <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+            <h2>GovtPath</h2>
+            <div class="nav-menu">
+                <button class="nav-close" aria-label="Close menu">&times;</button>
+                <ul class="nav-list">
+                    <li><a asp-action="Index">Home</a></li>
+                    <li><a asp-action="LatestJob">Latest Job</a></li>
+                    <li><a asp-action="AdmitCard">Admit Card</a></li>
+                    <li><a asp-action="Result">Result</a></li>
+                    <li><a asp-action="AboutUs">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Main Container  -->
+    <div class="sec-1">
+        <table>
+            <tr>
+                <th>Name Of Post</th>
+                <td>
+                    @Model.name_of_post
+                </td>
+            </tr>
+            <tr>
+                <th>Post Date / Update</th>
+                <td>@Model.post_date</td>
+            </tr>
+            <tr>
+                <th>Short Information</th>
+                <td>
+                    @Model.short_info
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- Section - 2 -->
+    <div class="sec-2">
+        <div class="card">
+            <h2>@Model.name_of_post</h2>
+            <h1>@Model.organization_name</h1>
+            <p> @Model.advertisement_no</p>
+            <table>
+                <tr>
+                    <th>Important Dates</th>
+                    <th>Application Fee</th>
+                </tr>
+                <tr>
+                    <td>
+                        <li><b>@Model.imp_date1</b></li>
+                        <li><b>@Model.imp_date2</b></li>
+                        <li><b>@Model.imp_date3</b></li>
+                        <li><b>@Model.imp_date4</b></li>
+                    </td>
+                    <td>
+                        <li><b> @Model.app_fee1</b></li>
+                        <li><b>@Model.app_fee2</b></li>
+                        <li>@Model.app_fee3</li>
+                        <li>@Model.app_fee4</li>
+                    </td>
+                </tr>
+            </table>
+            <div class="age">
+                <h2>@Model.organization_name</h2>
+                <p>Age Limit as on @Model.age_limit_as</p>
+                <li> <b>@Model.age_limit1</b></li>
+                <li> <b>@Model.age_limit2</b></li>
+                <li><b>@Model.age_limit3</b></li>
+                <li><b>@Model.age_limit4</b></li>
+                <li>
+                    @Model.age_limit5
+                </li>
+            </div>
+        </div>
+    </div>
+    <!-- Section-3  -->
+    <div class="sec-2">
+        <div class="card">
+            <h2>@Model.organization_name</h2>
+            <p> Vacancy Details Total : @Model.total_post </p>
+            <table class="txt">
+                <tr>
+                    <th>Post Name</th>
+                  @*   <th>Gen</th>
+                    <th>EWS</th>
+                    <th>OBC</th>
+                    <th>SC</th>
+                    <th>ST</th> *@
+                    <th>Total Post</th>
+                    <th>Various Post Eligibility</th>
+                </tr>
+                <tr>
+                    <td>
+                        @Model.post_short_name
+                    </td>
+                  @*   <td>@Model.gen</td>
+                    <td>@Model.ews</td>
+                    <td>@Model.obc</td>
+                    <td>@Model.sc</td>
+                    <td>@Model.st</td> *@
+                    <td>@Model.total_post</td>
+                    <td>
+                        <li>@Model.post_eligibility1</li>
+                        <li>@Model.post_eligibility2</li>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Section-4  -->
+    <div class="sec-4">
+        <div class="sec-1 back">
+            <h2>Interested Candidates Can Read the Full Notification Before Apply Online.</h2>
+            <table class="bg">
+                <tr>
+                    <th>Check Result</th>
+                    <td><a href="@Model.admitcard_link">Click Here</a></td>
+                </tr>
+                <tr>
+                    <th>Download Admit Card</th>
+                    <td><a href="@Model.admitcard_link">Click Here</a></td>
+                </tr>
+                <tr>
+                    <th>Apply Online</th>
+                    <td><a href="@Model.online_link">Click Here</a></td>
+                </tr>
+                <tr>
+                    <th>Download Notification</th>
+                    <td><a href="@Model.notification_link">Click Here</a></td>
+                </tr>
+                <tr>
+                    <th>Official Website</th>
+                    <td><a href="@Model.official_link">Official Website</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Footer Section  -->
+    <footer>
+        <div class="col1">
+            <h1>GovtPath</h1>
+            <p>Looking for your next career opportunity. Look no further</p>
+            <div class="f-menu">
+                <a asp-action="Index">Home</a>
+                <a asp-action="AboutUs">About Us</a>
+                <a asp-action="LatestJob">Latest Job</a>
+                <a asp-action="Result">Result</a>
+            </div>
+        </div>
+        <div class="col1">
+            <h1>Subscribe To Get Our <br> Newsletter</h1>
+            <p>Looking for your next career opportunity. Look no further</p>
+        </div>
+        <div class="col3">
+            <div class="row1">
+                <input type="email" placeholder="Enter Your Email">
+                <button type="submit">Subscribe</button>
+            </div>
+            <div class="row2">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-threads"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-google-play"></i>
+                <i class="fa-brands fa-app-store-ios"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- Bottom Footer  -->
+    <div class="b-footer">
+        <p>© 2024 GovtPath. All rights reserved. | Designed By Suresh Kumar</p>
+    </div>
+    <!-- JS File  -->
+    <script src="~/js/script.js"></script>
+</body>
+
+</html>

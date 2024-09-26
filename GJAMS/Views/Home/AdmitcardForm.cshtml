@@ -1,0 +1,127 @@
+﻿@model GJAMS.Models.AdmitCard
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta asp-for="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Advertisement Form</title>
+    <link rel="stylesheet" href="~/css/JobFrom.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admit Card Form</h1>
+        <form method="post" asp-action="AdmitCardForm">
+            <div class="form-group">
+                <a asp-action="AdminPanel">Back to Admin Panel</a>
+            </div>
+            <div class="form-group">
+                <label for="post-name">Name of Post:</label>
+                <input type="text" id="post-name" asp-for="name_of_post">
+            </div>
+            <div class="form-group">
+                <label for="post-date">Post Date/Update:</label>
+                <input type="datetime-local" id="post-date" asp-for="post_date">
+            </div>
+            <div class="form-group">
+                <label for="short-info">Short Information:</label>
+                <textarea id="short-info" asp-for="short_info" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="organization-name">Organization Name:</label>
+                <input type="text" id="organization-name" asp-for="organization_name">
+            </div>
+            <div class="form-group">
+                <label for="organization-name">Total Post:</label>
+                <input type="text" id="organization-name" asp-for="total_post">
+            </div>
+            <div class="form-group">
+                <label for="advertisement-no">Advertisement No:</label>
+                <input type="text" id="advertisement-no" asp-for="advertisement_no">
+            </div>
+            <div class="form-group">
+                <label for="important-dates">Important Dates:</label>
+                <input type="text" id="application-fee" asp-for="imp_date1" placeholder="1">
+                <input type="text" id="application-fee" asp-for="imp_date2" placeholder="2">
+                <input type="text" id="application-fee" asp-for="imp_date3" placeholder="3">
+                <input type="text" id="application-fee" asp-for="imp_date4" placeholder="4">
+                <input type="text" id="application-fee" asp-for="imp_date5" placeholder="5">
+            </div>
+            <div class="form-group">
+                <label for="application-fee">Application Fee:</label>
+                <input type="text" id="application-fee" asp-for="app_fee1" placeholder="1">
+                <input type="text" id="application-fee" asp-for="app_fee2" placeholder="2">
+                <input type="text" id="application-fee" asp-for="app_fee3" placeholder="3">
+                <input type="text" id="application-fee" asp-for="app_fee4" placeholder="4">
+            </div>
+            <div class="form-group">
+                <label for="age-limits">Age Limits as on:</label>
+                <input type="text" id="age-limits" asp-for="age_limit_as">
+            </div>
+            <div class="form-group">
+                <label for="age-limits">Age Limits:</label>
+                <input type="text" id="age-limits" asp-for="age_limit1" placeholder="1">
+                <input type="text" id="age-limits" asp-for="age_limit2" placeholder="2">
+                <input type="text" id="age-limits" asp-for="age_limit3" placeholder="3">
+                <input type="text" id="age-limits" asp-for="age_limit4" placeholder="4">
+                <input type="text" id="age-limits" asp-for="age_limit5" placeholder="5">
+            </div>
+            <div class="form-group">
+                <label for="post-name">Short Name of Post:</label>
+                <input type="text" id="post-name" asp-for="post_short_name">
+            </div>
+            <div class="form-group">
+                <label for="post-date">Gen</label>
+                <input type="text" id="post-date" asp-for="gen">
+            </div>
+            <div class="form-group">
+                <label for="organization-name">EWS</label>
+                <input type="text" id="organization-name" asp-for="ews">
+            </div>
+            <div class="form-group">
+                <label for="advertisement-no">OBC</label>
+                <input type="text" id="advertisement-no" asp-for="obc">
+            </div>
+            <div class="form-group">
+                <label for="application-fee">SC</label>
+                <input type="text" id="application-fee" asp-for="sc">
+            </div>
+            <div class="form-group">
+                <label for="age-limits">ST</label>
+                <input type="text" id="age-limits" asp-for="st">
+            </div>
+            <div class="form-group">
+                <label for="apply-online">Various Post Eligibility</label>
+                <input type="text" id="apply-online" asp-for="post_eligibility1" placeholder="1">
+                <input type="text" id="apply-online" asp-for="post_eligibility2" placeholder="2">
+                <input type="text" id="apply-online" asp-for="post_eligibility3" placeholder="3">
+                <input type="text" id="apply-online" asp-for="post_eligibility4" placeholder="4">
+                <input type="text" id="apply-online" asp-for="post_eligibility5" placeholder="5">
+            </div>
+            <div class="form-group">
+                <label for="apply-online">Admit Card Link:</label>
+                <input type="text" id="apply-online" asp-for="admitcard_link">
+            </div>
+            <div class="form-group">
+                <label for="apply-online">Apply Online Link:</label>
+                <input type="text" id="apply-online" asp-for="online_link">
+            </div>
+            <div class="form-group">
+                <label for="download-notification">Download Notification Link:</label>
+                <input type="text" id="download-notification" asp-for="notification_link">
+            </div>
+            <div class="form-group">
+                <label for="official-website">Official Website Link:</label>
+                <input type="text" id="official-website" asp-for="official_link">
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

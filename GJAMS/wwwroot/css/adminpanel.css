@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+}
+:root{
+    --orange:#ff7a00;
+    --white: #ffffff;
+    --black: #000000;
+    --gray:  #e6e3e3;
+    --text:  #464444;  
+}
+.main{
+    justify-content: center;
+    color: var(--black);
+    height: auto;
+    width: 100%;
+    background-color: var(--gray);
+}
+.main >.col1{
+    position: sticky;
+    top: 0;
+    gap: 20px;
+    color: var(--white);
+    display: flex;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: var(--orange);
+    height: auto;
+    align-items: center;
+    width: 100%;
+}
+h4 a{
+    text-decoration: none;
+    color: var(--white);
+}
+.main >.col2{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--white);
+    height: auto;
+    width: 100%;
+    gap: 10px;
+}
+.div1{
+    display: flex;
+    justify-content: space-between;
+}
+.div1 p{
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+}
+.div1 p a{
+    font-weight: 600;
+    color: #f00000;
+}
+.div2{
+    gap: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.div2 > .col1{
+    color: var(--white);
+    gap: 10px;
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center ;
+    border-radius: 5px;
+    height: 150px;
+    width: 150%;
+    background-color: var(--orange);
+}
+.job{
+    padding-top: 20px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.job .btn{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+    width: 130px;
+    background-color: rgb(15, 39, 253);
+    border: none;
+    color: var(--white);
+    border-radius: 3px;
+}
+table,th,td{
+    border-collapse: collapse;
+    padding: 10px;
+    border: 1px solid #c0bfbf;
+    background-color: var(--gray);
+}
+tr>td{
+    text-align: center;
+    background-color: var(--white);
+}
+.danger{
+    line-height: 40px;
+    font-size: 15px;
+    border-radius:2px;
+    color: var(--white);
+    border: none;
+    background-color:red;
+    height: 40px;
+    padding: 10px;
+    text-decoration: none;
+    width: 80px;
+}
+.primary{
+    font-size: 15px;
+    border-radius: 2px;
+    color: var(--black);
+    border: none;
+    background-color:rgb(250, 225, 1);   
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    text-decoration: none;
+}

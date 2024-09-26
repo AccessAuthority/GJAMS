@@ -1,0 +1,307 @@
+﻿@model GJAMS.Models.CombinedViewModel
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS Library CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet">
+    <!-- Stylesheet files  -->
+    <link rel="stylesheet" href="~/css/Stylesheet.css">
+    <title>Home | GovtPath</title>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav id="home">
+        <div class="n-col1">
+            <img src="~/images/logo.png" alt="logo">
+        </div>
+        <div class="n-col2">
+            <a class="active" asp-action="Index">Home</a>
+            <a asp-action="LatestJob">Latest Job</a>
+            <a asp-action="AdmitCard">Admit Card</a>
+            <a asp-action="Result">Result</a>
+            <a asp-action="AboutUs">About Us</a>
+        </div>
+        <div class="n-col3">
+            <div class="input">
+                <input type="text" placeholder="Search Jobs Here...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Navigation  -->
+    <div class="m-header">
+        <nav class="navbar">
+            <button class="nav-toggle" aria-label="Open menu">&#9776;</button>
+            <h2>GovtPath</h2>
+            <div class="nav-menu">
+                <button class="nav-close" aria-label="Close menu">&times;</button>
+                <ul class="nav-list">
+                    <li><a asp-action="Index">Home</a></li>
+                    <li><a asp-action="LatestJob">Latest Job</a></li>
+                    <li><a asp-action="AdmitCard">Admit Card</a></li>
+                    <li><a asp-action="Result">Result</a></li>
+                    <li><a asp-action="AboutUs">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Header Section  -->
+    <header>
+        <div class="h-col1">
+            <p class="gtr" data-aos="fade-right">Welcome to the Govt Job Advertisement Portal!</p>
+            <h1>Unlock Your Dream <br> Career with <span>GovtPath</span></h1>
+            <p class="h-paragraph">
+                Looking for a new Govt job can be both exciting and daunting. Navigating the the job
+                market involves
+                exploring various avenues, including online job boards.
+            </p>
+        </div>
+        <div class="h-col2"></div>
+    </header>
+    <!-- Slide Section  -->
+    <div class="slider">
+        <h1>Featured Govt Jobs</h1>
+        <div class="slide-track">
+            <div class="slide">
+                <a asp-action=" ">
+                    Punjab Haryana HC
+                    PEON
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    Navy 10+2 SSR MA
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    GATE 2025 Online Form
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    CISF Constable Fire
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    RRB Paramedical Online Form
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    SSC GD Constable
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    ITBP Constable Kitchen Services
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    RSMSSB 10+2 CET Inter Level
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    BIS Various Post 2024
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    Union Bank of India Apprentices
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    Haryana Assistant Professor
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    IIIT Allahabad Teaching
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    Punjab and Haryana HC Peon
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    Supreme Court Attendant
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    NPCIL Stipendiary Trainee
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    RRC NR Delhi Apprentices
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    Railway RRB Paramedical Post
+                    <p>Apply Online</p>
+                </a>
+            </div>
+            <div class="slide">
+                <a asp-action=" ">
+                    Railway RRB Technician CEN
+                    <p>Apply Online</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Latest Jobs Section  -->
+    <div class="latest-job" id="job" data-aos="fade-up" data-aos-duration="500">
+        <h1>Latest Govt Jobs</h1>
+        <div class="container" data-aos="fade-up" data-aos-duration="500">
+            @foreach (var data in Model.Table_2)
+                {
+            <a asp-action="JobDetail" asp-route-id="@data.id" >
+                    <div class="job">
+                    <div class="col1">@data.name_of_post</div>
+                    <div class="col2">
+                            <p><i class="fa-regular fa-clock"></i> @data.post_date</p>
+                        <p><i class="fa-solid fa-circle-user"></i> @data.total_post Posts</p>
+                    </div>
+                </div>
+            </a> 
+                }          
+        </div>
+        <a asp-action="LatestJob" class="btn">See All Jobs</a>
+    </div>
+    <!-- Admit Card Section  -->
+    <div class="admit-card latest-job" id="admit-card" data-aos="fade-up" data-aos-duration="500">
+        <h1>Admit Cards</h1>
+        <div class="container" data-aos="fade-up" data-aos-duration="500">
+         @foreach (var data in Model.AdmitCard)
+                {
+                <a asp-action="AdmiCardDetail" asp-route-id="@data.id">
+                <div class="job">
+                    <div class="col1">@data.name_of_post</div>
+                    <div class="col2">
+                        <p><i class="fa-regular fa-clock"></i> @data.post_date</p>
+                        <p><i class="fa-solid fa-circle-user"></i> @data.total_post Posts</p>
+                    </div>
+                </div>
+            </a>
+                }
+           
+        </div>
+        <a asp-action="AdmitCard" class="btn2">See All Admit Cards</a>
+    </div>
+    <!-- Result Section  -->
+    <div class="result" id="result" data-aos="fade-up" data-aos-duration="500">
+        <h1>Results</h1>
+        <div class="card-wrp" data-aos="fade-up" data-aos-duration="500">
+             @foreach (var results in Model.Result)
+            {
+                <a asp-action="ResultDetail" asp-route-id="@results.id">
+                <div class="crd1">
+                    <div class="col1">@results.name_of_post</div>
+                    <div class="col2">
+                        <p><i class="fa-regular fa-clock"></i> @results.post_date</p>
+                        <p><i class="fa-solid fa-circle-user"></i> @results.total_post Posts</p>
+                    </div>
+                </div>
+            </a>
+                }
+        </div>
+        <a asp-action="Result" class="btn3">See All Results</a>
+    </div>
+    <!-- Footer Section  -->
+    <footer>
+        <div class="col1">
+            <h1>GovtPath</h1>
+            <p>Looking for your next career opportunity. Look no further</p>
+            <div class="f-menu">
+                <a asp-action="Index">Home</a>
+                <a asp-action="AboutUs">About Us</a>
+                <a asp-action="LatestJob">Latest Job</a>
+                <a asp-action="Result">Result</a>
+            </div>
+        </div>
+        <div class="col1">
+            <h1>Subscribe To Get Our <br> Newsletter</h1>
+            <p>Looking for your next career opportunity. Look no further</p>
+        </div>
+        <div class="col3">
+            <div class="row1">
+                <input type="email" placeholder="Enter Your Email">
+                <button type="submit">Subscribe</button>
+            </div>
+            <div class="row2">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-threads"></i>
+                <i class="fa-brands fa-telegram"></i>
+                <i class="fa-brands fa-google-play"></i>
+                <i class="fa-brands fa-app-store-ios"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- Bottom Footer  -->
+    <div class="b-footer">
+        <p>
+            © 2024 GovtPath. All rights reserved. | Designed By <a asp-action="AdminLogin" target="_blank">
+                Suresh
+                Kumar
+            </a>
+        </p>
+    </div>
+    <!-- JS File  -->
+ <script>
+        // Prevent going back to the login page after logout
+        window.history.pushState(null, '', window.location.href);
+        window.onpopstate = function () {
+            window.history.pushState(null, '', window.location.href);
+        };
+    </script>
+    <script src="~/js/script.js"></script>
+    <!-- AOS JS CDN  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
